@@ -49,7 +49,7 @@ module.exports = [
           $timeout
         ) {
           $scope.options = $scope.options || {};
-          $scope.formioForm = $scope.$parent[$scope.formName];
+          $scope.formioForm = $scope.$parent[$scope.formName || 'formioForm'];
 
           // Options to match jquery.maskedinput masks
           $scope.uiMaskOptions = {
